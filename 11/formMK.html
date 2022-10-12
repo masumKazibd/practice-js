@@ -4,30 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+    <title>Show form value</title>
+    <style>
+        .formDiv {
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+
+    </style>
 </head>
 <body>
     <div>
         <form action="">
-            <div>
-                <label for="id">Provide your id:</label>
-                <input type="text" name="id" id="id">
+            <div class="formDiv">
+                <label for="">Your Name:    </label>
+                <input type="text" name="Name" id="yourName">
             </div>
 
-            <div>
-                <label for="name">Your Birth name:</label>
-                <input type="text" name="name" id="name">
-            </div>
-            
-            <div>
-                <label for="email">Enter your e-mail address</label>
-                <input type="email" name="email" id="email">
+            <div class="formDiv">
+                <label for="">Your number:    </label>
+                <input type="number" name="Name" id="number">
             </div>
 
-            <div>
-                <button type="submit">Show</button>
+            <div class="formDiv">
+                <label for="">Your Email:    </label>
+                <input type="email" name="Name" id="email">
+            </div>
+
+            <div class="formDiv">
+                <label for="">Your Reference No:    </label>
+                <input type="number" name="Name" id="Reference">
+            </div>
+
+            <div class="formDiv">
+                <button type="submit"onclick="show1()">Show</button>
             </div>
         </form>
     </div>
+    <script>
+        function show1(){
+            var name = document.getElementById("yourName").value;
+            var Num= document.getElementById("number").value;
+            var Mail = document.getElementById("email").value;
+            var ref = document.getElementById("Reference").value;           
+            document.write(name);
+            document.write(Num);
+            document.write(Mail);
+            document.write(ref);
+        }
+    </script>
 </body>
 </html>
